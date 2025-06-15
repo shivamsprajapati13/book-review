@@ -6,7 +6,7 @@ A RESTful Node.js + Express API for managing books, user authentication, reviews
 
 ## 🚀 Features
 - User Login with JWT Authentication
-- Add, View, Update, Delete Books
+- Add, View Books
 - Submit, Edit, and Delete Reviews (one per user per book)
 - Pagination support for books and reviews
 - Book search by title or author (partial & case-insensitive)
@@ -94,7 +94,6 @@ CREATE DATABASE bookreview;
 - Use the schema below to create the necessary tables:
 
 ## 🗃️ Database Schema
-
 **Table: `users`**
 ```sql
 CREATE TABLE users (
@@ -106,7 +105,6 @@ CREATE TABLE users (
 
 ```
 **Table: `books`**
-
 ```sql
 CREATE TABLE books (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -121,7 +119,6 @@ CREATE TABLE books (
 
 ```
 **Table: `reviews`**
-
 ```sql
 CREATE TABLE reviews (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -141,9 +138,7 @@ CREATE TABLE reviews (
 ```
 node_modules/
 ```
-
-
-
+## API Curl Examples
 🔐 Register a User
 ```
 curl --location 'http://localhost:3000/registerUser' \
